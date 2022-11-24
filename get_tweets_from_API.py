@@ -55,7 +55,7 @@ def main():
     results = {}
     pagination_token=None #for the first call we need to not have pagination token
 
-    while i < 500:
+    while i < i_max:
         i += 1
         url, tweet_fields = create_url(pagination_token)
         json_response = connect_to_endpoint(url, tweet_fields)
